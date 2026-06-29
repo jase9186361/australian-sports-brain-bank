@@ -129,9 +129,19 @@ def build(filename, active, title, desc, hero_sub, body):
     print("wrote", filename, len(html), "chars")
 
 
+HEADSHOTS = {
+    'MB':'michael-buckland.jpg','MC':'monica-clarke.jpg','CS':'catherine-suter.jpg',
+    'AP':'alan-pearce.jpg','JC':'jennifer-cropley.jpg','LI':'linda-isles.jpg',
+    'AG':'amanda-green.jpg','RT':'renee-tuck.jpg',
+}
 def person(initials, name, role, text):
+    img = HEADSHOTS.get(initials)
+    if img:
+        pic = f'<div class="pic"><img src="assets/img/{img}" alt="{name}"></div>'
+    else:
+        pic = f'<div class="pic" aria-hidden="true">{initials}</div>'
     return f"""    <div class="person">
-      <div class="pic" aria-hidden="true">{initials}</div>
+      {pic}
       <div>
         <h3>{name}</h3>
         <div class="role">{role}</div>
