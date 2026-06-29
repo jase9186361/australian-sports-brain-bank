@@ -204,8 +204,11 @@ footer .tagline{color:#dff0ee}
 .partner{height:84px;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:10px;transition:.2s ease}
 .partner img{max-height:62px;max-width:170px;width:auto;object-fit:contain}
 .band{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:clamp(360px,46vw,440px)}
-.band-photo{background:linear-gradient(135deg,#4a5a3a,#2a3a22);display:flex;align-items:center;justify-content:center;
+.band-photo{position:relative;background:linear-gradient(135deg,#4a5a3a,#2a3a22);display:flex;align-items:center;justify-content:center;
         color:#cdd6c0;font-family:'Poppins',sans-serif;font-size:.85rem;min-height:220px}
+/* soft fade of the photo into the white text column, matching the brief */
+.band-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+        background:linear-gradient(90deg,rgba(255,255,255,0) 45%,rgba(255,255,255,.65) 78%,#ffffff 100%)}
 .band-text{background:#fff;padding:clamp(34px,5vw,58px);display:flex;flex-direction:column;justify-content:center;gap:16px}
 .band-text .btn{align-self:flex-start;margin-bottom:4px}
 .band-text em{color:var(--teal);font-style:italic;font-weight:600}
@@ -215,8 +218,11 @@ footer .tagline{color:#dff0ee}
 .profile{text-align:center}
 .avatar{width:clamp(110px,14vw,130px);aspect-ratio:1;border-radius:50%;margin:0 auto 16px;
         background:radial-gradient(circle at 35% 30%,var(--teal-mid),var(--teal-deep));color:#fff;display:flex;align-items:center;
-        justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.1rem);box-shadow:var(--shadow)}
+        justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.1rem);box-shadow:var(--shadow);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .avatar.tba{background:none;border:2px dashed var(--line);color:var(--teal)}
+.person .pic{overflow:hidden}
+.person .pic img{width:100%;height:100%;object-fit:cover;border-radius:14px}
 .profile h4{color:var(--ink);font-size:1.08rem;margin-bottom:4px}
 .profile .role{color:var(--teal);font-family:'Poppins',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.6px;
         text-transform:uppercase;margin-bottom:11px}
@@ -226,8 +232,11 @@ footer .tagline{color:#dff0ee}
 .pledge-card p{margin-bottom:18px}
 .pledge-ctas{display:flex;gap:14px;justify-content:center;margin-top:clamp(26px,4vw,38px);flex-wrap:wrap}
 .res-band{display:grid;grid-template-columns:1fr 1.1fr;align-items:stretch}
-.res-photo{background:linear-gradient(135deg,#6b7d7a,#3f4f4d);min-height:clamp(240px,40vw,520px);display:flex;align-items:center;
+.res-photo{position:relative;background:linear-gradient(135deg,#6b7d7a,#3f4f4d);min-height:clamp(240px,40vw,520px);display:flex;align-items:center;
         justify-content:center;color:#dfe7e5;font-family:'Poppins',sans-serif;font-size:.85rem}
+/* soft fade of the photo into the mint content column */
+.res-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+        background:linear-gradient(90deg,rgba(232,244,242,0) 50%,rgba(232,244,242,.6) 80%,var(--mint) 100%)}
 .res-text{padding:clamp(36px,5vw,62px);background:var(--mint)}
 .res-text>h2{text-align:left}
 .res-text>p{color:var(--muted);margin:10px 0 26px}
@@ -283,6 +292,7 @@ footer .tagline{color:#dff0ee}
   .hero-copy{max-width:none}
   .hero-ctas .btn{flex:1 1 0;background:transparent}
   .band,.res-band{grid-template-columns:1fr}
+  .band-photo::after,.res-photo::after{display:none}
   .timeline::before{left:45px}
   .tl-row{grid-template-columns:90px 1fr;column-gap:14px}
   .tl-row.left .tl-card,.tl-row.right .tl-card{grid-column:2;text-align:left}

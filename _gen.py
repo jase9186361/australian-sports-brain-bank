@@ -163,7 +163,7 @@ ambassadors = [
     ("AF","Anita Frawley","Ambassador",
      "Wife of the late AFL player and coach Danny Frawley, Anita was determined to find answers to her husband's mental health struggles. She is passionate about prioritising care for retired athletes, and protecting and supporting current athletes during their careers."),
     ("PF","Peter FitzSimons","Ambassador",
-     "Author, journalist and former Wallaby, Peter is a long-standing advocate for player welfare and brain health in Australian sport. As an ASBB ambassador he helps bring national attention to the importance of CTE research and the brain donor program."),
+     "Former Wallaby Peter FitzSimons is a vocal advocate for player safety and stricter concussion management in Australian contact sports. His stance has generated widespread debate, particularly regarding the long-term impacts of repeated head impacts and the risk of CTE. He advocates for drastic structural changes to make contact sports safer, including the total banning of the kick-off in rugby league to avoid initial, high-impact collisions."),
 ]
 about_body = f"""<section>
   <div class="wrap prose">
