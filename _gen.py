@@ -132,7 +132,7 @@ def build(filename, active, title, desc, hero_sub, body):
 HEADSHOTS = {
     'MB':'michael-buckland.jpg','MC':'monica-clarke.jpg','CS':'catherine-suter.jpg',
     'AP':'alan-pearce.jpg','JC':'jennifer-cropley.jpg','LI':'linda-isles.jpg',
-    'AG':'amanda-green.jpg','RT':'renee-tuck.jpg',
+    'AG':'amanda-green.jpg','RT':'renee-tuck.jpg','PF':'peter-fitzsimons.jpg',
 }
 def person(initials, name, role, text):
     img = HEADSHOTS.get(initials)
