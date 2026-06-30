@@ -131,8 +131,8 @@ def build(filename, active, title, desc, hero_sub, body):
 
 HEADSHOTS = {
     'MB':'michael-buckland.jpg','MC':'monica-clarke.jpg','CS':'catherine-suter.jpg',
-    'AP':'alan-pearce.jpg','JC':'jennifer-cropley.jpg','LI':'linda-isles.jpg',
-    'AG':'amanda-green.jpg','RT':'renee-tuck.jpg','PF':'peter-fitzsimons.jpg',
+    'AP':'alan-pearce.jpg','JC':'jennifer-cropley.jpg','LI':'linda-iles.jpg',
+    'AG':'amanda-green.jpg','RT':'renee-tuck.jpg','PF':'peter-fitzsimons.jpg','AF':'anita-frawley.jpg',
 }
 def person(initials, name, role, text):
     img = HEADSHOTS.get(initials)
@@ -154,16 +154,16 @@ def person(initials, name, role, text):
 team = [
     ("MB","Associate Professor Michael Buckland","Founding &amp; Executive Director",
      "A senior neuropathologist and Head of the Department of Neuropathology at Royal Prince Alfred Hospital, Head of the Molecular Neuropathology Program at the Brain &amp; Mind Centre, University of Sydney, and Co-Director of the Multiple Sclerosis Research Australia Brain Bank."),
-    ("MC","Monica Clarke (RN)","Brain Donation Specialist Nurse",
-     "A clinical nurse consultant with a background in organ transplant coordination. With over 15 years of clinical nursing experience, she is committed to improving future outcomes through ongoing research, while providing compassionate advocacy, support and education for individuals and families affected by CTE."),
+    ("LI","Associate Professor Linda Iles","Forensic Pathologist",
+     "Forensic pathologist at the Victorian Institute of Forensic Medicine (VIFM), where she has been Head of forensic pathology services for the past ten years. She has an interest in forensic neuropathology and post-mortem radiological imaging in forensic pathology practice."),
     ("CS","Associate Professor Catherine Suter","Chief Scientist",
      "Responsible for the direction and scientific integrity of ASBB tissue research. A world-recognised expert on environmental influence on disease risk, particularly epigenetics, she brings this expertise to the study of CTE to understand the disease and develop ways to diagnose it during life."),
     ("JC","Dr Jennifer Cropley","Data Scientist",
      "A senior research scientist expert in the analysis of large datasets. She brings her experience to the ASBB to spearhead population-based studies on the long-term outcomes of concussion and repeated head injuries in contact sports."),
-    ("AP","Associate Professor Alan Pearce","Research Manager — Victoria",
+    ("AP","Professor Alan Pearce","Research Manager — Victoria",
      "A neurophysiologist who has spent 20 years researching sports-related concussion. Using electrophysiological techniques, particularly transcranial magnetic stimulation, his research centres on brain physiology to quantify cognitive and motor impairments in the acute phase post-concussion and the chronic manifestations of repeated concussions."),
-    ("LI","Linda Isles","ASBB Team",
-     "Profile and photo to be added."),
+    ("MC","Monica Clarke (RN)","Brain Donation Specialist Nurse",
+     "A clinical nurse consultant with a background in organ transplant coordination. With over 15 years of clinical nursing experience, she is committed to improving future outcomes through ongoing research, while providing compassionate advocacy, support and education for individuals and families affected by CTE."),
 ]
 ambassadors = [
     ("AG","Amanda Green","Ambassador",
