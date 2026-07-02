@@ -49,9 +49,8 @@ def head(title, desc):
 def header(active):
     return """<header>
   <div class="wrap nav">
-    <a class="logo" href="index.html" aria-label="Australian Sports Brain Bank — home">
-      <span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
-      <span>SPORTS<small>Brain Bank</small></span>
+    <a class="logo" href="index.html" aria-label="Sports Brain Bank — home">
+      <img class="logo-img" src="assets/img/logo.png" alt="Sports Brain Bank">
     </a>
     <nav id="nav" aria-label="Primary">
       <ul>
@@ -152,13 +151,13 @@ def person(initials, name, role, text):
 
 # ---------------------------------------------------------------- ABOUT
 team = [
-    ("MB","Associate Professor Michael Buckland","Founding &amp; Executive Director",
+    ("MB","Michael Buckland","Founding &amp; Executive Director",
      "A senior neuropathologist and Head of the Department of Neuropathology at Royal Prince Alfred Hospital, Head of the Molecular Neuropathology Program at the Brain &amp; Mind Centre, University of Sydney, and Co-Director of the Multiple Sclerosis Research Australia Brain Bank."),
-    ("LI","Associate Professor Linda Iles","Forensic Pathologist",
+    ("LI","Linda Iles","Forensic Pathologist",
      "Forensic pathologist at the Victorian Institute of Forensic Medicine (VIFM), where she has been Head of forensic pathology services for the past ten years. She has an interest in forensic neuropathology and post-mortem radiological imaging in forensic pathology practice."),
-    ("CS","Associate Professor Catherine Suter","Chief Scientist",
+    ("CS","Catherine Suter","Chief Scientist",
      "Responsible for the direction and scientific integrity of ASBB tissue research. A world-recognised expert on environmental influence on disease risk, particularly epigenetics, she brings this expertise to the study of CTE to understand the disease and develop ways to diagnose it during life."),
-    ("JC","Dr Jennifer Cropley","Data Scientist",
+    ("JC","Jennifer Cropley","Data Scientist",
      "A senior research scientist expert in the analysis of large datasets. She brings her experience to the ASBB to spearhead population-based studies on the long-term outcomes of concussion and repeated head injuries in contact sports."),
     ("AP","Professor Alan Pearce","Research Manager — Victoria",
      "A neurophysiologist who has spent 20 years researching sports-related concussion. Using electrophysiological techniques, particularly transcranial magnetic stimulation, his research centres on brain physiology to quantify cognitive and motor impairments in the acute phase post-concussion and the chronic manifestations of repeated concussions."),
