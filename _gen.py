@@ -66,6 +66,7 @@ def header(active):
             <li><a href="resources.html">Downloadable resources</a></li>
           </ul>
         </li>
+        <li><a href="in-the-media.html">In the media</a></li>
         <li><a href="support.html">Support us</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -159,7 +160,7 @@ team = [
      "Responsible for the direction and scientific integrity of ASBB tissue research. A world-recognised expert on environmental influence on disease risk, particularly epigenetics, she brings this expertise to the study of CTE to understand the disease and develop ways to diagnose it during life."),
     ("JC","Jennifer Cropley","Data Scientist",
      "A senior research scientist expert in the analysis of large datasets. She brings her experience to the ASBB to spearhead population-based studies on the long-term outcomes of concussion and repeated head injuries in contact sports."),
-    ("AP","Professor Alan Pearce","Research Manager — Victoria",
+    ("AP","Alan Pearce","Research Manager — Victoria",
      "A neurophysiologist who has spent 20 years researching sports-related concussion. Using electrophysiological techniques, particularly transcranial magnetic stimulation, his research centres on brain physiology to quantify cognitive and motor impairments in the acute phase post-concussion and the chronic manifestations of repeated concussions."),
     ("MC","Monica Clarke (RN)","Brain Donation Specialist Nurse",
      "A clinical nurse consultant with a background in organ transplant coordination. With over 15 years of clinical nursing experience, she is committed to improving future outcomes through ongoing research, while providing compassionate advocacy, support and education for individuals and families affected by CTE."),
@@ -431,6 +432,38 @@ build("resources.html","resources.html","Resources",
       "CTE information, pledge and donation options, and downloadable resources from the Australian Sports Brain Bank.",
       "CTE information, ways to pledge and support, and downloadable materials.",
       resources_body)
+
+# ---------------------------------------------------------------- IN THE MEDIA
+media = [
+ ("aHShkmUdx4E","Four Corners","Collision","2026"),
+ ("lf0OQgH0vUs","A Current Affair","RunIt","2025"),
+ ("6-nhJNnoMng","ABC 7.30","First female athlete diagnosed with CTE","2023"),
+ ("cSNSx8q6ZSA","10 News","Paul Green's CTE diagnosis","2023"),
+ ("0CLc4r6LSpM","A Current Affair","His brain had been taken over","2023"),
+ ("_L-2XfKjimE","60 Minutes","Mind Matters","2021"),
+ ("H6l1jZIM8gg","Sky News Australia","AFL players at higher risk of developing CTE","2020"),
+]
+media_cards = ""
+for vid,outlet,title,year in media:
+    thumb = f"https://img.youtube.com/vi/{vid}/hqdefault.jpg"
+    url = f"https://www.youtube.com/watch?v={vid}"
+    media_cards += f"""      <a class="res-card" href="{url}" target="_blank" rel="noopener">
+        <div class="thumb" aria-hidden="true" style="background-image:url('{thumb}')"></div>
+        <div class="body"><h3>{title}</h3><p>{outlet} &middot; {year}</p><span class="watch">Watch on YouTube &rarr;</span></div>
+      </a>
+"""
+media_body = f"""<section>
+  <div class="wrap">
+    <div class="prose"><p>The Australian Sports Brain Bank and its work have featured across major Australian media. A selection of appearances covering CTE research, advocacy, and the families affected.</p></div>
+    <div class="res-cards">
+{media_cards}    </div>
+  </div>
+</section>
+"""
+build("in-the-media.html","in-the-media.html","In the Media",
+      "The Australian Sports Brain Bank in the media — CTE coverage and appearances across Australian television.",
+      "The Australian Sports Brain Bank across major Australian media.",
+      media_body)
 
 # ---------------------------------------------------------------- CONTACT
 contact_body = """<section>
